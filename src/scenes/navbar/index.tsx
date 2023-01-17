@@ -19,7 +19,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
   const [menuToggle, setMenuToggle] = useState<Boolean>(false);
 
   const flexBetween = `flex  items-center justify-between `;
-  const screenGreaterThan = useMediaQuery('(max-width: 1090px)');
+  const screenGreaterThan = useMediaQuery('(min-width: 1090px)');
 
   const navLinks = ['Home', 'Our Classes', 'Benifits', 'Contact Us'];
 
@@ -73,29 +73,38 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
           {/* Mobile Model and backdrop */}
           {!screenGreaterThan && menuToggle && (
             <div
-              className={` fixed bottom-0 right-0 z-50 h-full w-[300px] bg-primary-100 shadow-lg 
-              transition-width duration-500 ease-in
+              className={` fixed bottom-0 right-0 top-0 left-0 z-30  h-full w-full  
+          
+              backdrop-blur-[2px]
               `}
             >
-              <div className={` relative flex items-center  justify-end `}>
-                <XCircleIcon
-                  className={`absolute right-12 top-12 h-10 w-10 cursor-pointer text-[#a761bfb6] hover:text-primary-300  `}
-                  onClick={() => setMenuToggle(!menuToggle)}
-                />
-                <div
-                  className={` absolute top-28 right-20 flex  flex-col items-center justify-center gap-10 space-x-5 text-2xl font-semibold`}
-                >
-                  {navLinks.map((links, i) => (
-                    <Links
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                      page={links}
-                      key={`#${i}+links`}
-                      id={`#${i}+ ${links}`}
-                    />
-                  ))}
+              {/* checking */}
+              <div
+                className={`fixed bottom-0 right-0 z-50 h-full w-[300px] bg-primary-100 
+                drop-shadow-xl
+              transition-width duration-500 ease-in`}
+              >
+                <div className={` relative flex items-center  justify-end `}>
+                  <XCircleIcon
+                    className={`absolute right-12 top-12 h-10 w-10 cursor-pointer text-[#a761bfb6] hover:text-primary-300  `}
+                    onClick={() => setMenuToggle(!menuToggle)}
+                  />
+                  <div
+                    className={` absolute top-28 right-20 flex  flex-col items-center justify-center gap-10 space-x-5 text-2xl font-semibold`}
+                  >
+                    {navLinks.map((links, i) => (
+                      <Links
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                        page={links}
+                        key={`#${i}+links`}
+                        id={`#${i}+ ${links}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
+              {/* checking */}
             </div>
           )}
         </div>
