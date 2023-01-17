@@ -3,6 +3,10 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      transitionProperty: {
+        width: 'width',
+        height: 'height',
+      },
       colors: {
         'gray-20': '#F8F4EB',
         'gray-50': '#EFE6E6',
@@ -29,6 +33,7 @@ module.exports = {
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
       },
+
       screens: {
         xs: '480px',
         sm: '768px',

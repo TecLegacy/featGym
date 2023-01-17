@@ -13,9 +13,12 @@ interface Props {
 }
 
 const Links = ({ page, id: linkId, selectedPage, setSelectedPage }: Props) => {
-  //lowercase page - later to use it as id
-  //typescript doesnt understand type of lower, as it to enum
+  /**
+   *lowercase page - later to use it as id
+    typescript doesnt understand type of lower, as it to enum 
+   */
   const lowerCase = page.toLowerCase().replace(/ /g, '') as SelectedPage;
+
   console.log(lowerCase);
   console.log(selectedPage);
   return (
