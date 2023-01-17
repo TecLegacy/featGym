@@ -22,7 +22,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           <img src={logo} alt="Logo" className={` h-16 w-28 `} />
 
           {/* right side */}
-          <div className={`  w-5/6     gap-16  `}>
+          <div className={` w-4/6 gap-16  `}>
             <div className={`${flexBetween} w-full   `}>
               <div className={`${flexBetween}  gap-8 text-sm`}>
                 {/* Nav item - interface string */}
