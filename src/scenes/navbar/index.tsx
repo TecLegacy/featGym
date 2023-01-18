@@ -19,17 +19,17 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
   const [menuToggle, setMenuToggle] = useState<Boolean>(false);
 
   const flexBetween = `flex  items-center justify-between `;
-  const screenGreaterThan = useMediaQuery('(min-width: 1090px)');
+  const screenGreaterThan = useMediaQuery('(min-width: 1085px)');
 
   const navLinks = ['Home', 'Our Classes', 'Benifits', 'Contact Us'];
 
-  const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow';
+  const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow   ';
   return (
     <>
       <nav
-        className={`${navScroll} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+        className={`${navScroll} ${flexBetween} fixed top-0 z-30 w-full py-6 opacity-90`}
       >
-        <div className={` ${flexBetween} mx-auto   w-5/6 `}>
+        <div className={`  ${flexBetween} mx-auto   w-5/6 `}>
           {/* left side logo */}
           <img src={logo} alt="Logo" className={` h-16 w-28 `} />
 
@@ -49,7 +49,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
                     />
                   ))}
                 </div>
-                <div className={`${flexBetween} gap-7 `}>
+                <div className={`${flexBetween} gap-7  `}>
                   <p>Sing In</p>
 
                   <Button setSelectedPage={setSelectedPage}>
@@ -82,8 +82,8 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
             onClick={() => setMenuToggle(!menuToggle)}
           >
             <div
-              className={`fixed  bottom-0 right-0 z-50 h-full w-[300px] 
-              bg-primary-100
+              className={`fixed bottom-0 right-0 z-50 h-full w-[300px] bg-primary-100 
+              opacity-90
                drop-shadow-xl
             transition-width duration-500 ease-in`}
             >
@@ -97,7 +97,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
 
                 {/* MENU ITEMS */}
                 <div
-                  className={` absolute  top-28 right-20 ml-[33%] flex  flex-col items-center justify-center gap-10 text-2xl font-semibold`}
+                  className={` absolute top-28 right-20 flex  flex-col items-center justify-center gap-10 space-x-5 text-2xl font-semibold`}
                 >
                   {navLinks.map((links, i) => (
                     <Links

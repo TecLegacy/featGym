@@ -19,6 +19,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "../Resources/multiple image handle in js/index.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
