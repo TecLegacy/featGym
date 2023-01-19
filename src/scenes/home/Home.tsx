@@ -27,22 +27,30 @@ const Home = ({ setSelectedPage }: Props) => {
       >
         {/* IMAGE AND MAIN HEADER */}
         <div
-          className={` mx-auto w-5/6 items-center  justify-center  md:flex md:h-5/6  `}
+          className={` ml- mx-auto w-5/6  items-center  justify-center md:flex md:h-5/6 `}
         >
-          <div className={` z-10  mt-32 md:basis-3/5`}>
+          <div className={` z-10  mt-32 mr-10 md:basis-3/5`}>
             {/* FeatGym Text */}
-            <div>
-              <img src={images.GymText} alt="Home-section-image" />
+            <div className={`relative`}>
+              <div
+                className={`-top before:absolute  before:-top-24 before:-left-16 before:z-[-1] md:before:content-evolvetext`}
+              >
+                {/* Main header text */}
+                <div className={``}>
+                  <img src={images.GymText} alt="Home-section-image" />
+                </div>
+                {/* Motivation */}
+                <div className={` flex `}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                    nemo atque deserunt expedita voluptatibus fuga asperiores
+                    aliquid officiis unde nulla iusto nesciunt, enim debitis
+                    tempora facere consectetur. A, asperiores officiis.
+                  </p>
+                </div>
+              </div>
             </div>
-            {/* Motivation */}
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                nemo atque deserunt expedita voluptatibus fuga asperiores
-                aliquid officiis unde nulla iusto nesciunt, enim debitis tempora
-                facere consectetur. A, asperiores officiis.
-              </p>
-            </div>
+
             {/* Join us */}
             <div>
               <Button setSelectedPage={setSelectedPage}>Join Now </Button>
@@ -56,7 +64,9 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
           </div>
           {/* Right side */}
-          <div>
+          <div
+            className={` w-[42%]   items-center  justify-center   pt-8 md:flex`}
+          >
             {/* Fitness image */}
             <img src={HomePageGraphic} alt="fitness-girl-image" />
           </div>
