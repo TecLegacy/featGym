@@ -1,6 +1,6 @@
 import { Bars3BottomRightIcon, XCircleIcon } from '@heroicons/react/24/outline';
 
-import logo from '@/asset/Featgym.svg';
+import { images } from '@/constants';
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Button from '@/shared/Button';
@@ -23,7 +23,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
 
   const navLinks = ['Home', 'Our Classes', 'Benifits', 'Contact Us'];
 
-  const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow   ';
+  const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow-md  ';
   return (
     <>
       <nav
@@ -31,9 +31,9 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
       >
         <div className={`  ${flexBetween} mx-auto   w-5/6 `}>
           {/* left side logo */}
-          <img src={logo} alt="Logo" className={` h-16 w-28 `} />
+          <img src={images.Logo} alt="Logo" className={` h-16 w-28 `} />
 
-          {/* right side Responsive design*/}
+          {/* Right side Responsive design*/}
           {screenGreaterThan ? (
             <div className={` w-4/6 gap-16  `}>
               <div className={`${flexBetween} w-full   `}>

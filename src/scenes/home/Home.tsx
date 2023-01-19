@@ -1,20 +1,38 @@
 import { SelectedPage } from '@/shared/types';
-import gymText from '@/asset/FeatGymText.svg';
+import { images } from '@/constants';
+
+import Button from '@/shared/Button';
+import useMediaQuery from '@/hooks/useMediaQuery';
+
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+//delete late and add your own optimized images
+import HomePageGraphic from '@/assets/HomePageGraphic.png';
+import SponsorRedBull from '@/assets/SponsorRedBull.png';
+import SponsorForbes from '@/assets/SponsorForbes.png';
+import SponsorFortune from '@/assets/SponsorFortune.png';
 
 interface Props {
-  setSelectedPage: (value: SelectedPage.ContactUs) => void;
+  setSelectedPage: (value: SelectedPage) => void;
 }
 
 const Home = ({ setSelectedPage }: Props) => {
+  const screenGreaterThan = useMediaQuery('(min-width: 1085px)');
+
   return (
     <>
-      <section>
-        {/* Left Side */}
-        <div className={` flex items-center  justify-between `}>
-          <div>
+      <section
+        id="home"
+        className={`gap-16 bg-gray-20 py-10 md:h-full md:pb-0 `}
+      >
+        {/* IMAGE AND MAIN HEADER */}
+        <div
+          className={` mx-auto w-5/6 items-center  justify-center  md:flex md:h-5/6  `}
+        >
+          <div className={` z-10  mt-32 md:basis-3/5`}>
             {/* FeatGym Text */}
             <div>
-              <img src={gymText} alt="Home-section-image" />
+              <img src={images.GymText} alt="Home-section-image" />
             </div>
             {/* Motivation */}
             <div>
@@ -27,16 +45,35 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
             {/* Join us */}
             <div>
-              <button>Join Now</button>
-              <button>Learn More</button>
+              <Button setSelectedPage={setSelectedPage}>Join Now </Button>
+              <AnchorLink
+                className={` cursor-pointer text-sm font-bold text-primary-500 underline`}
+                href={`#${SelectedPage.ContactUs}`}
+                onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+              >
+                Learn More
+              </AnchorLink>
             </div>
           </div>
           {/* Right side */}
           <div>
             {/* Fitness image */}
-            <img src="" alt="fitness-girl-image" />
+            <img src={HomePageGraphic} alt="fitness-girl-image" />
           </div>
         </div>
+
+        {/* Sponsors */}
+        {screenGreaterThan && (
+          <div>
+            <div>
+              <div>
+                <img src={SponsorForbes} alt="Sponsor-Forbes" />
+                <img src={SponsorFortune} alt="Sponsor-Fortune" />
+                <img src={SponsorRedBull} alt="Sponsor-RedBull" />
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );
