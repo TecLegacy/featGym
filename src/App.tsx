@@ -30,6 +30,7 @@ function App() {
   return (
     <>
       {/* NAVBAR */}
+
       <div className="app bg-gray-20">
         <Navbar
           isTop={isTop}
@@ -38,14 +39,13 @@ function App() {
         />
 
         <Home setSelectedPage={setSelectedPage} />
-      </div>
+        <div id="benifits" className={` h-full bg-red-400`}>
+          T
+        </div>
 
-      <div id="benifits" className={` h-full bg-red-400`}>
-        T
-      </div>
-
-      <div id="contactus" className={` h-full bg-cyan-400`}>
-        P
+        <div id="contactus" className={` h-full bg-cyan-400`}>
+          P
+        </div>
       </div>
     </>
   );

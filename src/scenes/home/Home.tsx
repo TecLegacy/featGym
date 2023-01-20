@@ -23,39 +23,42 @@ const Home = ({ setSelectedPage }: Props) => {
     <>
       <section
         id="home"
-        className={`gap-16 bg-gray-20 py-10 md:h-full md:pb-0 `}
+        className={` gap-16 bg-gray-20 py-10 md:h-full md:pb-0 `}
       >
         {/* IMAGE AND MAIN HEADER */}
         <div
-          className={` ml- mx-auto w-5/6  items-center  justify-center md:flex md:h-5/6 `}
+          className={`mx-auto w-5/6  items-center  justify-center md:flex md:h-5/6 `}
         >
-          <div className={` z-10  mt-32 mr-10 md:basis-3/5`}>
+          <div className={` z-10  mt-32 mr-10 w-full md:basis-3/5`}>
             {/* FeatGym Text */}
             <div className={`relative`}>
               <div
-                className={`-top before:absolute  before:-top-24 before:-left-16 before:z-[-1] md:before:content-evolvetext`}
+                className={`w-5/6 before:absolute before:-top-24 before:-left-16 before:z-[-1] md:before:content-evolvetext`}
               >
                 {/* Main header text */}
-                <div className={``}>
-                  <img src={images.GymText} alt="Home-section-image" />
+                <div className=" md:max-w-[80%]">
+                  <img
+                    className={``}
+                    src={images.GymText}
+                    alt="Home-section-image"
+                  />
                 </div>
                 {/* Motivation */}
-                <div className={` flex `}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                    nemo atque deserunt expedita voluptatibus fuga asperiores
-                    aliquid officiis unde nulla iusto nesciunt, enim debitis
-                    tempora facere consectetur. A, asperiores officiis.
-                  </p>
-                </div>
+              </div>
+              <div className="mt-6 w-5/6 space-x-3 ">
+                <p>
+                  Unbeatable gym. Unparalleled Fitness Training Courses
+                  Top-notch studios to achieve the body shapes you desire. Get
+                  Your Dream Body Quickly.
+                </p>
               </div>
             </div>
 
             {/* Join us */}
-            <div>
+            <div className={`mt-8 flex items-center gap-8`}>
               <Button setSelectedPage={setSelectedPage}>Join Now </Button>
               <AnchorLink
-                className={` cursor-pointer text-sm font-bold text-primary-500 underline`}
+                className={` cursor-pointer text-sm font-bold text-primary-500 underline transition duration-200 hover:text-secondary-500`}
                 href={`#${SelectedPage.ContactUs}`}
                 onClick={() => setSelectedPage(SelectedPage.ContactUs)}
               >
@@ -65,18 +68,18 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
           {/* Right side */}
           <div
-            className={` w-[42%]   items-center  justify-center   pt-8 md:flex`}
+            className={`mb-8  ml-[-5%]  items-center  pt-8   md:flex md:w-[42%] md:justify-center`}
           >
             {/* Fitness image */}
             <img src={HomePageGraphic} alt="fitness-girl-image" />
           </div>
         </div>
 
-        {/* Sponsors */}
+        {/* Small Devices & Sponsors */}
         {screenGreaterThan && (
-          <div>
-            <div>
-              <div>
+          <div className="h-[150px] w-full bg-primary-100 py-10">
+            <div className="mx-auto w-5/6">
+              <div className="flex w-3/5 items-center justify-between gap-8">
                 <img src={SponsorForbes} alt="Sponsor-Forbes" />
                 <img src={SponsorFortune} alt="Sponsor-Fortune" />
                 <img src={SponsorRedBull} alt="Sponsor-RedBull" />
