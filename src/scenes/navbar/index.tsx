@@ -21,6 +21,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = `flex  items-center justify-between `;
   const screenGreaterThan = useMediaQuery('(min-width: 1085px)');
 
+  //Pages
   const navLinks = ['Home', 'Our Classes', 'Benifits', 'Contact Us'];
 
   const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow-md  ';
@@ -97,7 +98,7 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
 
                 {/* MENU ITEMS */}
                 <div
-                  className={` absolute top-28 right-20 flex  flex-col items-center justify-center gap-10 space-x-5 text-2xl font-semibold`}
+                  className={` absolute top-28 right-20 ${flexBetween}  flex-col  gap-10 space-x-5 text-2xl font-semibold`}
                 >
                   {navLinks.map((links, i) => (
                     <Links

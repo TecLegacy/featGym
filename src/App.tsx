@@ -2,9 +2,10 @@ import Navbar from '@/scenes/navbar';
 
 import { useState, useEffect } from 'react';
 import { SelectedPage } from '@/shared/types';
-import Home from '@/scenes/home/Home';
+import Home from '@/scenes/home';
 
 function App() {
+  //Current Active page state
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
@@ -30,15 +31,14 @@ function App() {
   return (
     <>
       {/* NAVBAR */}
-
-      <div className="app bg-gray-20">
+      {/* <div className="app bg-gray-20">
         <Navbar
           isTop={isTop}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-
         <Home setSelectedPage={setSelectedPage} />
+
         <div id="benifits" className={` h-full bg-red-400`}>
           T
         </div>
@@ -46,7 +46,14 @@ function App() {
         <div id="contactus" className={` h-full bg-cyan-400`}>
           P
         </div>
+      </div> */}
+      {/* Testing min width/height */}
+      {/* <div className={` h-full bg-blue-400`}> */}
+      <div className={` min-h-[200px]  bg-red-400`}>
+        <div className={`  `}>c</div>
+        in
       </div>
+      {/* </div> */}
     </>
   );
 }
