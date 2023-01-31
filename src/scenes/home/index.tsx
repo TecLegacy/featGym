@@ -32,6 +32,8 @@ const Home = ({ setSelectedPage }: Props) => {
           className={`mx-auto w-5/6  items-center  justify-center md:flex md:h-5/6 `}
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
+          {/* Framer motion */}
+
           <motion.div
             className={` z-10  mt-32 mr-10 w-full md:basis-3/5`}
             initial="hidden"
