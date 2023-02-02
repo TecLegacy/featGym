@@ -39,15 +39,6 @@ function App() {
           setSelectedPage={setSelectedPage}
         />
         <Home setSelectedPage={setSelectedPage} />
-
-        {/* <div id="benifits" className={` h-full bg-red-400`}>
-          T
-        </div>
-
-        <div id="contactus" className={` h-full bg-cyan-400`}>
-          P
-        </div> */}
-
         <Benefits setSelectedPage={setSelectedPage} />
       </div>
     </>

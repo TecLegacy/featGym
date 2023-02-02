@@ -1,4 +1,5 @@
 import HeadText from '@/shared/HeadText';
+import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
 import { BenefitsType, SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
 import {
@@ -12,6 +13,16 @@ import BenefitsCard from './BenefitsCard';
 interface Props {
   setSelectedPage: (value: SelectedPage) => void;
 }
+
+// Staggered motion animation
+const parentContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const benefits: Array<BenefitsType> = [
   {
@@ -38,17 +49,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className={` min-h-full `}>
       <motion.div
-        className={`mx-auto w-5/6  py-20 `}
+        className={`mx-auto   w-5/6 py-20 `}
         // onViewportEnter={() => setSelectedPage(SelectedPage.Benifits)}
       >
-        <div className={` mx-auto w-5/6`}>
+        <div className={` mx-auto w-full`}>
           {/* HEADING TEXT */}
-          <div className={` w-3/5 `}>
+          <div>
             <HeadText word="More than just a gym">
               MORE THAN JUST A GYM
             </HeadText>
 
-            <p className={`my-5 text-sm`}>
+            <p className={`my-5 w-full text-sm md:w-4/6`}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
               ullam veniam at quia veritatis, earum doloremque amet nemo. Nisi,
               iste!
@@ -56,7 +67,14 @@ const Benefits = ({ setSelectedPage }: Props) => {
           </div>
 
           {/* BENEFITS */}
-          <div className={` mt-5 items-center justify-between gap-8  md:flex `}>
+          <motion.div
+            className={` mt-7  items-center justify-between gap-8  md:flex `}
+            // Animation class
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={parentContainer}
+          >
             {benefits.map((item: BenefitsType) => (
               <BenefitsCard
                 key={item.heading}
@@ -66,7 +84,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 icon={item.icon}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
