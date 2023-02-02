@@ -3,6 +3,7 @@ import Navbar from '@/scenes/navbar';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from '@/shared/types';
 import Home from '@/scenes/home';
+import Benefits from './scenes/benefits';
 
 function App() {
   //Current Active page state
@@ -31,7 +32,7 @@ function App() {
   return (
     <>
       {/* NAVBAR */}
-      {/* <div className="app bg-gray-20">
+      <div className="app bg-gray-20">
         <Navbar
           isTop={isTop}
           selectedPage={selectedPage}
@@ -39,21 +40,16 @@ function App() {
         />
         <Home setSelectedPage={setSelectedPage} />
 
-        <div id="benifits" className={` h-full bg-red-400`}>
+        {/* <div id="benifits" className={` h-full bg-red-400`}>
           T
         </div>
 
         <div id="contactus" className={` h-full bg-cyan-400`}>
           P
-        </div>
-      </div> */}
-      {/* Testing min width/height */}
-      {/* <div className={` h-full bg-blue-400`}> */}
-      <div className={` min-h-[200px]  bg-red-400`}>
-        <div className={`  `}>c</div>
-        in
+        </div> */}
+
+        <Benefits setSelectedPage={setSelectedPage} />
       </div>
-      {/* </div> */}
     </>
   );
 }
