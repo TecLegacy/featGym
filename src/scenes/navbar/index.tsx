@@ -22,7 +22,14 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
   const screenGreaterThan = useMediaQuery('(min-width: 1085px)');
 
   //Pages
-  const navLinks = ['Home', 'Our Classes', 'Benefits', 'Contact Us'];
+  const navLinks = [
+    'Home',
+    'Benefits',
+    'Our Classes',
+    'Contact Us',
+    'issue',
+    'no issue',
+  ];
 
   const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow-md  ';
   return (

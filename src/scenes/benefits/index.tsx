@@ -51,7 +51,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
     <section id="benefits" className={` min-h-full `}>
       <motion.div
         className={`mx-auto   w-5/6 py-20 `}
-        // onViewportEnter={() => setSelectedPage(SelectedPage.Benifits)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         <div className={` mx-auto w-full`}>
           {/* HEADING TEXT */}
