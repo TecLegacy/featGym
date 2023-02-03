@@ -69,7 +69,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
               MORE THAN JUST A GYM
             </HeadText>
 
-            <p className={`my-5 w-full text-sm md:w-4/6`}>
+            <p
+              className={`my-5 w-full text-justify text-sm leading-7 md:w-4/6 `}
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
               ullam veniam at quia veritatis, earum doloremque amet nemo. Nisi,
               iste!
@@ -143,7 +145,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <p className={` py-8`}>
+                <p className={` py-8 text-justify  leading-7`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
                   ipsa. Necessitatibus cumque doloremque quaerat fugiat
                   pariatur. Id reiciendis, corrupti magnam unde quos rem
@@ -152,7 +154,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   facilis deserunt cum, eaque asperiores, facere perspiciatis
                   tempora.
                 </p>
-                <p className=" mb-6">
+                <p className=" mb-6 text-justify  leading-7 ">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Numquam veritatis libero esse quod nihil ea.
                 </p>

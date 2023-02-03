@@ -32,7 +32,7 @@ const BenefitsCard = ({
       </div>
 
       <h4 className="font-bold">{heading}</h4>
-      <p className="my-3">{description}</p>
+      <p className="my-3 tracking-wide">{description}</p>
       <AnchorLink
         className="cursor-pointer text-sm font-bold text-primary-500 underline transition duration-200 hover:text-secondary-500 "
         onClick={() => setSelectedPage(SelectedPage.ContactUs)}

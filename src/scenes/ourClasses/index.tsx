@@ -51,7 +51,10 @@ interface Props {
 const index = ({ setSelectedPage }: Props) => {
   return (
     <>
-      <section className={` w-full bg-primary-100`} id="ourclasses">
+      <section
+        className={` min-h-[80vh] w-full bg-primary-100`}
+        id="ourclasses"
+      >
         <motion.div
           className={`  mx-auto mt-32 w-5/6 pb-10`}
           onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
@@ -75,7 +78,7 @@ const index = ({ setSelectedPage }: Props) => {
                 }}
               >
                 <HeadText word="our classes">Our Classes</HeadText>
-                <p className=" py-4  leading-relaxed">
+                <p className=" py-4  leading-relaxed ">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Veniam iste enim blanditiis quae consectetur dolores alias.
                   Nihil aspernatur voluptatum sequi reiciendis sint quas dolorem

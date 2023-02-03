@@ -1,6 +1,6 @@
 interface Props {
   children: React.ReactNode;
-  word: string;
+  word?: string;
 }
 
 const HeadText = ({ children, word }: Props) => {

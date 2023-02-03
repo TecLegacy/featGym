@@ -57,7 +57,9 @@ const Home = ({ setSelectedPage }: Props) => {
                 {/* Motivation */}
               </div>
               <div className="mt-6 w-5/6 space-x-3 ">
-                <p className={`text-sm`}>
+                <p
+                  className={` text-justify text-sm   leading-5 tracking-wide `}
+                >
                   Unbeatable gym. Unparalleled Fitness Training Courses
                   Top-notch studios to achieve the body shapes you desire. Get
                   Your Dream Body Quickly.

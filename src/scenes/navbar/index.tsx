@@ -22,20 +22,13 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
   const screenGreaterThan = useMediaQuery('(min-width: 1085px)');
 
   //Pages
-  const navLinks = [
-    'Home',
-    'Benefits',
-    'Our Classes',
-    'Contact Us',
-    'issue',
-    'no issue',
-  ];
+  const navLinks = ['Home', 'Benefits', 'Our Classes', 'Contact Us'];
 
   const navScroll = isTop ? '' : 'bg-primary-100 drop-shadow-md  ';
   return (
     <>
       <nav
-        className={`${navScroll} ${flexBetween} fixed top-0 z-30 w-full py-6 opacity-90`}
+        className={`${navScroll} ${flexBetween} fixed top-0 z-50 w-full py-6 opacity-90`}
       >
         <div className={`  ${flexBetween} mx-auto   w-5/6 `}>
           {/* left side logo */}
