@@ -15,7 +15,7 @@ const Classes = ({ name, description, image }: Props) => {
         <p className=" text-2xl font-bold  ">{name}</p>
         <p className={` text-sm`}>{description}</p>
       </div>
-      <img src={image} alt="image" />
+      <img src={image} alt="image" loading="lazy" />
     </li>
   );
 };

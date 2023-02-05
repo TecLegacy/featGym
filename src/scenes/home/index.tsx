@@ -9,7 +9,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 //delete late and add your own optimized images
 import HomePageGraphic from '@/assets/HomePageGraphic.webp';
-import SponsorRedBull from '@/assets/SponsorRedBull.webp';
+import SponsorRedBulls from '@/assets/SponsorRedBull.webp';
 import SponsorForbes from '@/assets/SponsorForbes.webp';
 import SponsorFortune from '@/assets/SponsorFortune.webp';
 
@@ -105,7 +105,7 @@ const Home = ({ setSelectedPage }: Props) => {
               <div className="flex w-3/5 items-center justify-between gap-8">
                 <img src={SponsorForbes} alt="Sponsor-Forbes" />
                 <img src={SponsorFortune} alt="Sponsor-Fortune" />
-                <img src={SponsorRedBull} alt="Sponsor-RedBull" />
+                <img src={SponsorRedBulls} alt="Sponsor-RedBull" />
               </div>
             </div>
           </div>

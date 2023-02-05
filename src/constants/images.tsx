@@ -1,5 +1,5 @@
-import Logo from '@/asset/Featgym.svg';
-import GymText from '@/asset/FeatgymText.svg';
+import Logo from '@/asset/Featgym.webp';
+import GymText from '@/asset/FeatgymText.webp';
 
 export default {
   Logo,

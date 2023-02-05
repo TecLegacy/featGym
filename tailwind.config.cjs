@@ -28,7 +28,7 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       content: {
-        evolvetext: "url('./asset/EvolveText.svg')",
+        evolvetext: "url('./asset/EvolveText.webp')",
         abstractwaves: "url('./assets/AbstractWaves.webp')",
         sparkles: "url('./assets/Sparkles.webp')",
         circles: "url('./assets/Circles.webp')",

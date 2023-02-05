@@ -146,6 +146,7 @@ const index = ({ setSelectedPage }: Props) => {
                     style={{ width: '100%' }}
                     src={ContactUsPageGraphic}
                     alt="Contact Us image"
+                    loading="lazy"
                   />
                 </div>
               </div>
