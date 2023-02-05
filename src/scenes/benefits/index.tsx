@@ -1,5 +1,5 @@
 import HeadText from '@/shared/HeadText';
-import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
+import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.webp';
 import { BenefitsType, SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
 import {
@@ -72,9 +72,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
             <p
               className={`my-5 w-full text-justify text-sm leading-7 md:w-4/6 `}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-              ullam veniam at quia veritatis, earum doloremque amet nemo. Nisi,
-              iste!
+              Are you tired of feeling sluggish and unfulfilled in your daily
+              life? Do you want to make a change that will boost your
+              confidence, energy, and overall well-being?
             </p>
           </motion.div>
 

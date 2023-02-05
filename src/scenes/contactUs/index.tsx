@@ -1,5 +1,5 @@
 import HeadText from '@/shared/HeadText';
-import ContactUsPageGraphic from '@/assets/ContactUsPageGraphic.png';
+import ContactUsPageGraphic from '@/assets/ContactUsPageGraphic.webp';
 
 import { SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';

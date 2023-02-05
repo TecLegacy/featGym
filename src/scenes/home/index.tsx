@@ -8,10 +8,10 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 //delete late and add your own optimized images
-import HomePageGraphic from '@/assets/HomePageGraphic.png';
-import SponsorRedBull from '@/assets/SponsorRedBull.png';
-import SponsorForbes from '@/assets/SponsorForbes.png';
-import SponsorFortune from '@/assets/SponsorFortune.png';
+import HomePageGraphic from '@/assets/HomePageGraphic.webp';
+import SponsorRedBull from '@/assets/SponsorRedBull.webp';
+import SponsorForbes from '@/assets/SponsorForbes.webp';
+import SponsorFortune from '@/assets/SponsorFortune.webp';
 
 interface Props {
   // type of any "setState" is void as it doesnt return anything
