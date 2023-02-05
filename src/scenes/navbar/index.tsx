@@ -31,8 +31,8 @@ const Navbar = ({ isTop, selectedPage, setSelectedPage }: Props) => {
         className={`${navScroll} ${flexBetween} fixed top-0 z-50 w-full py-6 opacity-90`}
       >
         <div className={`  ${flexBetween} mx-auto   w-5/6 `}>
-          {/* left side logo */}
-          <img src={images.Logo} alt="Logo" className={` h-16 w-28 `} />
+          {/* left side Logos */}
+          <img src={images.Logos} alt="Logos" className={` h-16 w-28 `} />
 
           {/* Right side Responsive design*/}
           {screenGreaterThan ? (

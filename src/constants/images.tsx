@@ -1,7 +1,7 @@
-import Logo from '@/asset/Featgym.webp';
-import GymText from '@/asset/FeatgymText.webp';
+import Logos from '@/asset/Featgym.webp';
+import GymTexts from '@/asset/FeatgymText.webp';
 
 export default {
-  Logo,
-  GymText,
+  Logos,
+  GymTexts,
 };
