@@ -52,7 +52,7 @@ const Home = ({ setSelectedPage }: Props) => {
               >
                 {/* Main header text */}
                 <div className=" md:max-w-[80%]">
-                  {/* <img src={images.GymTexts} alt="Home-section-image" /> */}
+                  <img src={images.GymText} alt="Home-section-image" />
                 </div>
                 {/* Motivation */}
               </div>
